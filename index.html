@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+  </head>
+  <!-- CSS -->
+  <style>
+    body {
+      background: linear-gradient(to right, #52bfe4, #676e69);
+      font-size: 20px;
+    }
+
+    .meme-generator {
+      margin: 20px auto;
+      width: 600px;
+      font-family: serif;
+    }
+
+    .meme-generator label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meme-generator input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      /* background: fuchsia; */
+    }
+
+    #meme {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .meme-generator {
+        margin: 10px auto;
+        width: 500px;
+        font-family: serif;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .meme-generator {
+        margin: 10px auto;
+        width: 400px;
+        font-family: serif;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .meme-generator {
+        margin: 10px auto;
+        width: 300px;
+        font-family: serif;
+      }
+    }
+  </style>
+
+  <!-- HTML body -->
+  <body>
+    <div class="meme-generator">
+      <label for="#">Выберите Фото</label>
+      <input type="file" id="imageFileInput" />
+
+      <label for="#">Верхний Текст</label>
+      <input type="text" id="topTextInput" />
+
+      <label for="#">Нижний Текст</label>
+      <input type="text" id="bottomTextInput" />
+
+      <canvas id="meme"></canvas>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
